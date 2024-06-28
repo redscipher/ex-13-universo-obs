@@ -6,7 +6,67 @@
 }
 
 /* elementos: pais */
+body{
+    display: flex;
+    flex-direction: column;
+     /* tamanho */
+    width: 100vw;
+    height: 100vh;
+}
+
+main{
+    /* ocupa o espaço restante verticalmente */
+    flex: 1;
+    /* align-content: center; */
+    text-align: center;
+    /* fundo */
+    background-color: #6e6e6e7d;
+    color: #fff;
+}
+
+header
+,footer{
+    background-color: #e9d5da;
+    /* background-image: linear-gradient(to right, #d71fef 5%, #0083f5 10%, #eaec74 19%, #ca4949 31%, #81b704 41%, #aa7705 50%, #852c0f 62%, #19062c 71%, #3604ec 88%, #9d4a42 99%); */
+    color: #9d5353;
+}
 
 /* classes: pais */
+.clsPrincipal{
+    max-width: 1024px;
+    width: 100%;
+    /* reseta margens */
+    margin: 0 auto;
+}
+
+.clsCarrossel{
+    width: 100vw;
+    height: 50vh;
+}
+
+/* classes elementos: pais */
+.clsCarrossel img{
+    height: 50vh;
+}
+
+header .clsPrincipal{
+    padding: 10px auto;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* alinha objetos */
+    justify-content: center;
+    /* fontes */
+    font-family: "Dekko", cursive;
+    font-style: italic;
+}
 
 /* id's: pais */
+
+/* fontes */
+.dekko-regular {
+    font-family: "Dekko", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  

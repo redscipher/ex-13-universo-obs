@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documento</title>
+    <title>Universo</title>
+    <!-- fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dekko&display=swap" rel="stylesheet">
     <!-- == estilos
         bootstrap -->
     <link rel="stylesheet" href="./biblioteca/bootstrap-5.3.3-dist/css/bootstrap.min.css">
@@ -11,11 +15,49 @@
     <link rel="stylesheet" href="./estilos_css/index.css">
 </head>
 <body>
+    <!-- cabecalho -->
     <header>
-
+        <div class="clsPrincipal container">
+            <h1 class="h1">Universo detalhado</h1>
+        </div>
     </header>
+    <!-- corpo -->
     <main>
-
+        <div class="clsCarrossel">
+            <!-- cria um carrossel -->
+            <div class="carousel slide carousel-fade" id="idCarrossel" data-bs-ride="carousel">
+                <!-- caixa que guardara os arquivos -->
+                <div class="carousel-inner">
+                    <!-- itens -->
+                    <div data-bs-interval="5000" class="carousel-item active">
+                        <img class="d-block w-100" src="https://as1.ftcdn.net/v2/jpg/04/04/81/58/1000_F_404815811_CKOsGQWMEx3kueGtJC4nmKNYceegNJ4Q.jpg" alt="Imagem do universo" class="d-block w-100">
+                    </div>
+                    <div data-bs-interval="5000" class="carousel-item">
+                        <img class="d-block w-100" src="https://img.freepik.com/free-photo/vertical-shot-sea-starry-sky-with-milky-way_181624-4770.jpg?t=st=1719536275~exp=1719539875~hmac=03db239a97a077f25a062eb0c6fa9d404d785daef624f1ac029c3dd4dcad1d48&w=740" alt="Imagem da Via Lactea vista da superficie da Terra" class="d-block w-100">
+                    </div>
+                    <div data-bs-interval="5000" class="carousel-item">
+                        <img class="d-block w-100" src="https://img.freepik.com/free-photo/ultra-detailed-nebula-abstract-wallpaper-10_1562-745.jpg?t=st=1719536145~exp=1719539745~hmac=b59ed63bd94a3080cd69e3b3cbf8e236f051603f56bd173b9acb89a6509bb35a&w=1060" alt="Foto de uma nebulosa" class="d-block w-100">
+                    </div>
+                </div>
+                <!-- botoes p/ deslizar pelo slide
+                    voltar -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#idCarrossel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Voltar</span>
+                </button>
+                <!-- proximo -->
+                <button class="carousel-control-next" type="button" data-bs-target="#idCarrossel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>    
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+                <!-- exibicao tamanho slide -->
+                <div class="carousel-indicators">
+                    <button class="active" type="button" data-bs-target="#idCarrossel" data-bs-slide-to="0"></button>
+                    <button type="button" data-bs-target="#idCarrossel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#idCarrossel" data-bs-slide-to="2"></button>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
 
