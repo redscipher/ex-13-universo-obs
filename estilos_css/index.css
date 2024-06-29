@@ -53,3 +53,21 @@ header .clsPrincipal{
     font-style: normal;
   }
   
+
+  /* == responsividades */
+/* p/ smartphones + celulares
+    geralmente vao ate 767px, apartir de 768px seria um tablet*/
+@media screen and (max-width: 767px) {
+    article{
+        padding: auto 8px;
+        margin: auto 8px;
+    }
+}
+
+/* tablet */
+@media screen and (min-width:768px) and (max-width:1023px){
+    article{
+        padding: auto 8px;
+        margin: auto 8px;
+    }
+}
