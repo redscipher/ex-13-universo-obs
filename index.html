@@ -16,52 +16,239 @@
 </head>
 <body>
     <!-- cabecalho -->
-    <header>
-        <div class="clsPrincipal container">
-            <h1 class="h1">Universo detalhado</h1>
+    <header id="idCabecalho">
+        <div class="container-fluid clsPrincipal dekko-regular text-center">
+            <h1 class="h1">Universo</h1>
+            <!-- cria barra de navegacao -->
+            <div class="navbar bg-tranparent rounded">
+                <!-- botao: hamburguer -->
+                <button type="button" class="navbar-toggler text-white" data-bs-toggle="collapse" data-bs-target="#idMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- menu de navegacao -->
+                <nav class="nav collapse navbar-collapse justify-content-center" id="idMenu">
+                    <ul class="nav navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- itens -->
+                        <li class="nav-item">
+                            <a href="#scCarrossel" class="nav-link active text-white">Imagens</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#scNoticias" class="nav-link text-white">Noticias</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
     <!-- corpo -->
     <main>
-        <div class="clsCarrossel">
-            <!-- cria um carrossel -->
-            <div class="carousel slide carousel-fade" id="idCarrossel" data-bs-ride="carousel">
-                <!-- caixa que guardara os arquivos -->
-                <div class="carousel-inner">
-                    <!-- itens -->
-                    <div data-bs-interval="5000" class="carousel-item active">
-                        <img class="d-block w-100" src="https://as1.ftcdn.net/v2/jpg/04/04/81/58/1000_F_404815811_CKOsGQWMEx3kueGtJC4nmKNYceegNJ4Q.jpg" alt="Imagem do universo" class="d-block w-100">
-                    </div>
-                    <div data-bs-interval="5000" class="carousel-item">
-                        <img class="d-block w-100" src="https://img.freepik.com/free-photo/vertical-shot-sea-starry-sky-with-milky-way_181624-4770.jpg?t=st=1719536275~exp=1719539875~hmac=03db239a97a077f25a062eb0c6fa9d404d785daef624f1ac029c3dd4dcad1d48&w=740" alt="Imagem da Via Lactea vista da superficie da Terra" class="d-block w-100">
-                    </div>
-                    <div data-bs-interval="5000" class="carousel-item">
-                        <img class="d-block w-100" src="https://img.freepik.com/free-photo/ultra-detailed-nebula-abstract-wallpaper-10_1562-745.jpg?t=st=1719536145~exp=1719539745~hmac=b59ed63bd94a3080cd69e3b3cbf8e236f051603f56bd173b9acb89a6509bb35a&w=1060" alt="Foto de uma nebulosa" class="d-block w-100">
+        <!-- GRID principal -->
+        <div class="container clsPrincipal" data-bs-spy="scroll" data-bs-target="#idCabecalho">
+            <section id="scCarrossel">
+                <h2 class="h2 text-white">Algumas imagens</h2>
+                <!-- primeirla linha: carrossel -->
+                <div class="row">
+                    <!-- ocupara todas colunas -->
+                    <div class="col-12">
+                        <!-- cria um carrossel -->
+                        <div class="carousel slide carousel-fade mb-5" id="idCarrossel" data-bs-ride="carousel">
+                            <!-- caixa que guardara os arquivos -->
+                            <div class="carousel-inner">
+                                <!-- itens -->
+                                <div data-bs-interval="5000" class="carousel-item active">
+                                    <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2017/08/08/00/33/constellations-2609647_1280.jpg" alt="Imagem de constelacoes do universo" class="d-block w-100">
+                                    <div class="carousel-caption d-md-block">
+                                        <a href="https://cdn.pixabay.com/photo/2017/08/08/00/33/constellations-2609647_1280.jpg">Abrir imagem</a>
+                                    </div>
+                                </div>
+                                <div data-bs-interval="5000" class="carousel-item">
+                                    <img class="d-block w-100" src="https://img.freepik.com/free-photo/photorealistic-galaxy-background_23-2151064352.jpg?t=st=1719578590~exp=1719582190~hmac=aac0a04ab949ea2872f858b19976142adca8a11ce323f70a49e202c94f1d2470&w=900" alt="Imagem de um buraco negro" class="d-block w-100">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <a href="https://img.freepik.com/free-photo/galaxy-night-view_23-2148895302.jpg?t=st=1719538860~exp=1719542460~hmac=05eb4e59449102737a0fe17533241f646ecb563f28c364322208682d5b541d87&w=996">Abrir imagem</a>
+                                    </div>
+                                </div>
+                                <div data-bs-interval="5000" class="carousel-item">
+                                    <img class="d-block w-100" src="https://img.freepik.com/free-photo/galaxy-night-panoramic_23-2148895344.jpg?t=st=1719578809~exp=1719582409~hmac=7ba11d6944c623b364b5783ad11cbc5132b48260481a398ea870ebf795624622&w=996" alt="Representacao de um planeta" class="d-block w-100">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <a href="https://www.freepik.com/free-ai-image/background-with-astral-planets-universe_36305555.htm#fromView=search&page=1&position=7&uuid=fd4a5bdd-5b4b-49f2-b696-0ebff15a861c">Abrir imagem</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- botoes p/ deslizar pelo slide
+                                voltar -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#idCarrossel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Voltar</span>
+                            </button>
+                            <!-- proximo -->
+                            <button class="carousel-control-next" type="button" data-bs-target="#idCarrossel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>    
+                                <span class="visually-hidden">Próximo</span>
+                            </button>
+                            <!-- exibicao tamanho slide -->
+                            <div class="carousel-indicators">
+                                <button class="active" type="button" data-bs-target="#idCarrossel" data-bs-slide-to="0"></button>
+                                <button type="button" data-bs-target="#idCarrossel" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#idCarrossel" data-bs-slide-to="2"></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- botoes p/ deslizar pelo slide
-                    voltar -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#idCarrossel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Voltar</span>
-                </button>
-                <!-- proximo -->
-                <button class="carousel-control-next" type="button" data-bs-target="#idCarrossel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>    
-                    <span class="visually-hidden">Próximo</span>
-                </button>
-                <!-- exibicao tamanho slide -->
-                <div class="carousel-indicators">
-                    <button class="active" type="button" data-bs-target="#idCarrossel" data-bs-slide-to="0"></button>
-                    <button type="button" data-bs-target="#idCarrossel" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#idCarrossel" data-bs-slide-to="2"></button>
+            </section>
+            <section id="scNoticias">
+                <h2 class="h2 text-white">Boletim</h2>
+                <div class="row">
+                    <!-- div p/ guar o grid -->
+                    <div class="container">
+                        <!-- linha -->
+                        <div class="row">
+                            <!-- em telas grande tera 3 colunas, em telas medias tera 2, e em telas pequenas tera 1 -->
+                            <div class="col-lg-4 col-md-6 col-sm-12 g-0">
+                                <!-- cria um card -->
+                                <article class="card text-center text-bg-dark p-3 m-1">
+                                    <!-- cabecalho -->
+                                    <header class="card-header">
+                                        <h2 class="card-title">Titulo</h2>
+                                    </header>
+                                    <!-- imagem -->
+                                    <img class="card-img" src="https://img.freepik.com/free-photo/photorealistic-galaxy-background_23-2151064414.jpg?t=st=1719599234~exp=1719602834~hmac=d816381534749229023f27790404ec061742a9c15d9ebbe14a41ac8c20a59a6e&w=900" alt="Imagem do centro de uma galaxia espiral">
+                                    <!-- corpo do card -->
+                                    <div class="card-body">
+                                        <div class="card-subtitle">Subtitulo</div>
+                                        <p class="card-text">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus sunt non unde quo, pariatur aspernatur earum qui quas quae eligendi nemo hic error possimus. Culpa accusamus quas porro sequi cupiditate?
+                                        </p>
+                                    </div>
+                                    <footer>
+                                        <!-- link p/ creditos -->
+                                        <a href="#" class="btn btn-primary">Visitar imagem</a>
+                                    </footer>
+                                </article>
+                            </div>
+                            <!-- em telas grande tera 3 colunas, em telas medias tera 2, e em telas pequenas tera 1 -->
+                            <div class="col-lg-4 col-md-6 col-sm-12 g-0">
+                                <!-- cria um card -->
+                                <article class="card text-center text-bg-dark p-3 mb-5 p-3 m-1">
+                                    <!-- cabecalho -->
+                                    <header class="card-header">
+                                        <h2 class="card-title">Titulo</h2>
+                                    </header>
+                                    <!-- imagem -->
+                                    <img class="card-img" src="https://img.freepik.com/free-photo/photorealistic-galaxy-background_23-2151064414.jpg?t=st=1719599234~exp=1719602834~hmac=d816381534749229023f27790404ec061742a9c15d9ebbe14a41ac8c20a59a6e&w=900" alt="Imagem do centro de uma galaxia espiral">
+                                    <!-- corpo do card -->
+                                    <div class="card-body">
+                                        <div class="card-subtitle">Subtitulo</div>
+                                        <p class="card-text">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus sunt non unde quo, pariatur aspernatur earum qui quas quae eligendi nemo hic error possimus. Culpa accusamus quas porro sequi cupiditate?
+                                        </p>
+                                    </div>
+                                    <footer>
+                                        <!-- link p/ creditos -->
+                                        <a href="#" class="btn btn-primary">Visitar imagem</a>
+                                    </footer>
+                                </article>
+                            </div>
+                            <!-- em telas grande tera 3 colunas, em telas medias tera 2, e em telas pequenas tera 1 -->
+                            <div class="col-lg-4 col-md-6 col-sm-12 g-0">
+                                <!-- cria um card -->
+                                <article class="card text-center text-bg-dark p-3 mb-5 p-3 m-1">
+                                    <!-- cabecalho -->
+                                    <header class="card-header">
+                                        <h2 class="card-title">Titulo</h2>
+                                    </header>
+                                    <!-- imagem -->
+                                    <img class="card-img" src="https://img.freepik.com/free-photo/photorealistic-galaxy-background_23-2151064414.jpg?t=st=1719599234~exp=1719602834~hmac=d816381534749229023f27790404ec061742a9c15d9ebbe14a41ac8c20a59a6e&w=900" alt="Imagem do centro de uma galaxia espiral">
+                                    <!-- corpo do card -->
+                                    <div class="card-body">
+                                        <div class="card-subtitle">Subtitulo</div>
+                                        <p class="card-text">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus sunt non unde quo, pariatur aspernatur earum qui quas quae eligendi nemo hic error possimus. Culpa accusamus quas porro sequi cupiditate?
+                                        </p>
+                                    </div>
+                                    <footer>
+                                        <!-- link p/ creditos -->
+                                        <a href="#" class="btn btn-primary">Visitar imagem</a>
+                                    </footer>
+                                </article>
+                            </div>
+                        </div>
+                        <!-- linha -->
+                        <div class="row">
+                            <!-- em telas grande tera 3 colunas, em telas medias tera 2, e em telas pequenas tera 1 -->
+                            <div class="col-lg-4 col-md-6 col-sm-12 g-0">
+                                <!-- cria um card -->
+                                <article class="card text-center text-bg-dark p-3 mb-5 p-3 m-1">
+                                    <!-- cabecalho -->
+                                    <header class="card-header">
+                                        <h2 class="card-title">Titulo</h2>
+                                    </header>
+                                    <!-- imagem -->
+                                    <img class="card-img" src="https://img.freepik.com/free-photo/photorealistic-galaxy-background_23-2151064414.jpg?t=st=1719599234~exp=1719602834~hmac=d816381534749229023f27790404ec061742a9c15d9ebbe14a41ac8c20a59a6e&w=900" alt="Imagem do centro de uma galaxia espiral">
+                                    <!-- corpo do card -->
+                                    <div class="card-body">
+                                        <div class="card-subtitle">Subtitulo</div>
+                                        <p class="card-text">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus sunt non unde quo, pariatur aspernatur earum qui quas quae eligendi nemo hic error possimus. Culpa accusamus quas porro sequi cupiditate?
+                                        </p>
+                                    </div>
+                                    <footer>
+                                        <!-- link p/ creditos -->
+                                        <a href="#" class="btn btn-primary">Visitar imagem</a>
+                                    </footer>
+                                </article>
+                            </div>
+                            <!-- em telas grande tera 3 colunas, em telas medias tera 2, e em telas pequenas tera 1 -->
+                            <div class="col-lg-4 col-md-6 col-sm-12 g-0">
+                                <!-- cria um card -->
+                                <article class="card text-center text-bg-dark p-3 mb-5 p-3 m-1">
+                                    <!-- cabecalho -->
+                                    <header class="card-header">
+                                        <h2 class="card-title">Titulo</h2>
+                                    </header>
+                                    <!-- imagem -->
+                                    <img class="card-img" src="https://img.freepik.com/free-photo/photorealistic-galaxy-background_23-2151064414.jpg?t=st=1719599234~exp=1719602834~hmac=d816381534749229023f27790404ec061742a9c15d9ebbe14a41ac8c20a59a6e&w=900" alt="Imagem do centro de uma galaxia espiral">
+                                    <!-- corpo do card -->
+                                    <div class="card-body">
+                                        <div class="card-subtitle">Subtitulo</div>
+                                        <p class="card-text">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus sunt non unde quo, pariatur aspernatur earum qui quas quae eligendi nemo hic error possimus. Culpa accusamus quas porro sequi cupiditate?
+                                        </p>
+                                    </div>
+                                    <footer>
+                                        <!-- link p/ creditos -->
+                                        <a href="#" class="btn btn-primary">Visitar imagem</a>
+                                    </footer>
+                                </article>
+                            </div>
+                            <!-- em telas grande tera 3 colunas, em telas medias tera 2, e em telas pequenas tera 1 -->
+                            <div class="col-lg-4 col-md-6 col-sm-12 g-0">
+                                <!-- cria um card -->
+                                <article class="card text-center text-bg-dark p-3 mb-5 p-3 m-1">
+                                    <!-- cabecalho -->
+                                    <header class="card-header">
+                                        <h2 class="card-title">Titulo</h2>
+                                    </header>
+                                    <!-- imagem -->
+                                    <img class="card-img" src="https://img.freepik.com/free-photo/photorealistic-galaxy-background_23-2151064414.jpg?t=st=1719599234~exp=1719602834~hmac=d816381534749229023f27790404ec061742a9c15d9ebbe14a41ac8c20a59a6e&w=900" alt="Imagem do centro de uma galaxia espiral">
+                                    <!-- corpo do card -->
+                                    <div class="card-body">
+                                        <div class="card-subtitle">Subtitulo</div>
+                                        <p class="card-text">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus sunt non unde quo, pariatur aspernatur earum qui quas quae eligendi nemo hic error possimus. Culpa accusamus quas porro sequi cupiditate?
+                                        </p>
+                                    </div>
+                                    <footer>
+                                        <!-- link p/ creditos -->
+                                        <a href="#" class="btn btn-primary">Visitar imagem</a>
+                                    </footer>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
         </div>
     </main>
-    <footer>
-
-    </footer>
     <!-- == scripts 
         bootstrap -->
     <script type="text/javascript" src="./biblioteca/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
