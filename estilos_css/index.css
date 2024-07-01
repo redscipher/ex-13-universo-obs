@@ -6,16 +6,15 @@
 }
 
 /* elementos: pais */
-body{
-    background-color: #3a4044;
+html{
+    /* corta oque exceder os limites */
+    overflow: hidden;
 }
 
-/* elementos filhos diretos: pais */
-body > header{
-    padding: 10px auto;
-    margin-bottom: 10px;
-    /* cores */
-    background-color: #5d5d677f;
+/* ids: pais */
+#idImagensFundo{
+    /* manda imagem p/ plano de fundo: p/ atras */
+    z-index: 0;
 }
 
 /* classes: pais */
@@ -24,50 +23,52 @@ body > header{
     width: 100%;
 }
 
-/* mistos: classes + classes elemntos 'pais' */
-.carousel
-,.carousel img{
-    height: 80vh;
-    /* bordas */
-    border-radius: 5px;
-    border: none;
+.card-img-overlay{
+    /* margens */
+    border: 2px solid rgba(97, 97, 97, 0.356);
+    /* tamanho do cartao principal */
+    width: 100vw;
+    height: 90vh;
+     /* adiciona rolagem se necessario */
+     overflow: auto;
 }
 
-/* elementos classes: pais */
-header .clsPrincipal{
-    color: #e8e8ea;
-    /* display */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+/* classes > elementos : pais */
+.container > header{
+    color: #ede6db;
+    margin-bottom: 24px;
 }
 
-/* classes elementos: pais */
+/* elementos.classes: pais */
+h2.card-title{
+    color: #e9d5da;
+    /* fontes */
+    font-family: "Margarine", sans-serif;;
+}
 
-/* id's: pais */
+p.card-text{
+    color: #ccc;
+    /* fontes */
+    font-family: "Rowdies", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+}
 
 /* fontes */
 .dekko-regular {
     font-family: "Dekko", cursive;
     font-weight: bold;
+    font-style: bold;
+}
+
+.margarine-regular {
+    font-family: "Margarine", sans-serif;
+    font-weight: 400;
     font-style: normal;
   }
   
-
-  /* == responsividades */
-/* p/ smartphones + celulares
-    geralmente vao ate 767px, apartir de 768px seria um tablet*/
-@media screen and (max-width: 767px) {
-    article{
-        padding: auto 8px;
-        margin: auto 8px;
-    }
-}
-
-/* tablet */
-@media screen and (min-width:768px) and (max-width:1023px){
-    article{
-        padding: auto 8px;
-        margin: auto 8px;
-    }
-}
+  .rowdies-regular {
+    font-family: "Rowdies", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
